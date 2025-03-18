@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake WhatsApp Video Call</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="startScreen">
+            <h2>Fake WhatsApp Call</h2>
+            <button onclick="startCall()">Call</button>
+            <input type="file" id="videoInput" accept="video/*">
+        </div>
+        
+        <div id="callScreen">
+            <h2>Calling...</h2>
+        </div>
+
+        <div id="ringingScreen">
+            <h2>Ringing...</h2>
+        </div>
+
+        <div id="videoContainer">
+            <video id="video" autoplay></video>
+            <video id="webcam" autoplay muted></video>
+            <div class="buttons">
+                <button onclick="endCall()">End Call</button>
+            </div>
+        </div>
+
+        <div id="endScreen">
+            <h2>Call Ended</h2>
+            <p>Duration: <span id="callDuration">0:00</span></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
