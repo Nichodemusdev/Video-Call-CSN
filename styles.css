@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#callScreen, #ringingScreen, #videoContainer, #endScreen {
+    display: none;
+}
+
+#videoContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; 
+}
+
+
+#webcam {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: red;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+@media (max-width: 768px) {
+    #webcam {
+        width: 100px;
+        height: 150px;
+    }
+}
